@@ -1,1 +1,1 @@
-# CoffeeMachineClass
+# CoffeeMachine

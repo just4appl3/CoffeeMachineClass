@@ -1,0 +1,12 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/VSWorkspaceState.json
+/.vs
+/CoffeeMachineSimulator/.vs/CoffeeMachineSimulator
+/CoffeeMachineSimulator/CoffeeMachineSimulator.Sender/bin/Debug/netcoreapp3.1
+/CoffeeMachineSimulator/CoffeeMachineSimulator.Sender/obj
+/CoffeeMachineSimulator/CoffeeMachineSimulator.UI/bin/Debug/netcoreapp3.1
+
+CoffeeMachineSimulator/CoffeeMachineSimulator.UI/obj
