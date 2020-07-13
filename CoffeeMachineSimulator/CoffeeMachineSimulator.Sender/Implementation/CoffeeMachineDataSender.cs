@@ -1,20 +1,14 @@
-﻿using CoffeeMachineSimulator.Sender.Model.CoffeeMachine.Simulator.Sender.Model;
+﻿using CoffeeMachineSimulator.Interfaces.Sender;
+using CoffeeMachineSimulator.Sender.Model.CoffeeMachine.Simulator.Sender.Model;
 using Microsoft.Azure.EventHubs;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CoffeeMachineSimulator.Sender
+namespace CoffeeMachineSimulator.Implementation.Sender
 {
-    public interface ICoffeMachineDataSender
-    {
-        Task SendDataAsync(CoffeeMachineData data);
-        Task SendDataAsync(IEnumerable<CoffeeMachineData> datas);
-    }
-
     public class CoffeeMachineDataSender : ICoffeMachineDataSender
     {
         private EventHubClient _ehClient;
@@ -38,7 +32,6 @@ namespace CoffeeMachineSimulator.Sender
         {
             var eventDatas = datas.Select(x => CreateEventData(x));
             var evDataBatch = _ehClient.CreateBatch();
-
 
             foreach (var evData in eventDatas)
             {

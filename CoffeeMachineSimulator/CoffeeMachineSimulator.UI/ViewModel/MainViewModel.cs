@@ -1,9 +1,8 @@
-﻿using CoffeeMachineSimulator.Sender;
+﻿using CoffeeMachineSimulator.Interfaces.Sender;
 using CoffeeMachineSimulator.Sender.Model.CoffeeMachine.Simulator.Sender.Model;
 using Prism.Commands;
 using Prism.Mvvm;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
