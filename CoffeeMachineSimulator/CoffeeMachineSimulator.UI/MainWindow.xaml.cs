@@ -1,4 +1,4 @@
-﻿using CoffeeMachineSimulator.Sender;
+﻿using CoffeeMachineSimulator.Implementation.Sender;
 using CoffeeMachineSimulator.UI.ViewModel;
 using System.Windows;
 
@@ -12,8 +12,7 @@ namespace CoffeeMachineSimulator.UI
         public MainWindow()
         {
             InitializeComponent();
-            InitializeComponent();
-            var evConnString = "Endpoint=sb://coffeenamespace.servicebus.windows.net/;SharedAccessKeyName=coffeehub;SharedAccessKey=lnq8b4L/cdiiwQR6yUABa61AZ4YiHJAnifsrtSWLCNs=;EntityPath=coffeehub";
+            var evConnString = "Endpoint=sb://coffemachineeventhubns.servicebus.windows.net/;SharedAccessKeyName=coffemachinepolicy;SharedAccessKey=z/YG/0fEEgVte1nj/2dzwhKw/weEtXRcBZp3RBBlNvg=;EntityPath=coffeemachineeventhub";
             DataContext = new MainViewModel(new CoffeeMachineDataSender(evConnString));
         }
     }
